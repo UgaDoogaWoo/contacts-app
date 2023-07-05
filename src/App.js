@@ -29,6 +29,9 @@ function formatPhoneNumber(phoneNumber) {
 
 const ContactProfile = ({ contact, onContactClick }) => {
     const formattedPhone = formatPhoneNumber(contact.phone);
+    useEffect(() => {
+        document.title = contact.name+"'s profile"; // Update the document title with the contact's name
+    }, [contact.name]);
     return (
         <div className="profile-container">
             <header className="profile">
@@ -63,6 +66,9 @@ const ContactProfile = ({ contact, onContactClick }) => {
 };
 
 const ContactList = ({ contacts, onContactClick }) => {
+    useEffect(() => {
+        document.title = 'Contacts';
+    },[]);
     return (
         <div className="list-container">
             <header className="list-header">
