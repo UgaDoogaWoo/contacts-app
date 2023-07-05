@@ -3,7 +3,7 @@ import axios from 'axios';
 import './style.css';
 import './style-profile.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBriefcase, faCircleLeft, faMobileScreen, faAt } from '@fortawesome/free-solid-svg-icons';
+import {faBriefcase, faCircleLeft, faMobileScreen, faAt, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function formatPhoneNumber(phoneNumber) {
     var formattedNumber='';
@@ -41,6 +41,10 @@ const ContactProfile = ({ contact, onContactClick }) => {
             </header>
 
             <section className="profile-contact-info">
+                <div className="profile-info-line">
+                    <FontAwesomeIcon icon={faUser} className="icon-gradient" />
+                    <p className="profile-user">{contact.username}</p>
+                </div>
                 <div className="profile-info-line">
                     <FontAwesomeIcon icon={faMobileScreen} className="icon-gradient" />
                     <p className="profile-phone-number">{formattedPhone}</p>
