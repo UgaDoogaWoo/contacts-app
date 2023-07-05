@@ -1,0 +1,76 @@
+body {
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+}
+
+.list-container {
+	max-width: 428px;
+	margin: 0 auto;
+	background-color: #313438;
+	height: 100vh;
+}
+
+	.list-container button {
+		text-decoration: none;
+	}
+
+.list-header {
+	display: flex;
+	justify-content: space-evenly;
+	color: #fff;
+	background: linear-gradient(90deg, rgba(241, 90, 34, 1) 0%, rgba(235, 149, 50, 1) 100%);
+	padding: 2em 0;
+	align-items: center;
+}
+
+.list-contacts-library {
+	background: #313438;
+}
+
+.list-contact-name {
+	color: #fff;
+	font-size: 1.5em;
+	padding: 0.4em 0.5em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+hr {
+	border: 1px solid #494a4b;
+}
+
+.list-item {
+	list-style: none;
+}
+
+.list-user {
+	color: #fff;
+	width: 12em;
+	text-align: center;
+	padding: 0.4em 0.5em;
+	border-radius: 100px;
+	border-top-left-radius: 0;
+	background-color: #f15a22;
+	font-size: 1.15em;
+}
+
+.list-button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em 1.5em;
+	transition: 0.3s;
+	width:100%;
+	background-color: #313438;
+}
+	.list-button:hover {
+		background-color: #48494a;
+	}
+
+.text {
+	padding-left: 1em;
+}
