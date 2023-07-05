@@ -27,14 +27,14 @@ function formatPhoneNumber(phoneNumber) {
     return formattedNumber;
 }
 
-const ContactProfile = ({ contact }) => {
+const ContactProfile = ({ contact, onContactClick }) => {
     const formattedPhone = formatPhoneNumber(contact.phone);
     return (
         <div className="profile-container">
             <header className="profile">
-                <a href="/contacts" className="back-btn">
+                <button className="back-button" onClick={onContactClick}>
                     <FontAwesomeIcon icon={faCircleLeft} />
-                </a>
+                </button>
                 <div className="profile-info">
                     <h1 className="profile-name">{contact.name}</h1>
                 </div>
@@ -101,10 +101,15 @@ const App = () => {
         setSelectedContact(contact);
     };
 
+    const handleBackClick = () => {
+        setSelectedContact(null);
+    };
+
+
     return (
         <div>
             {selectedContact ? (
-                <ContactProfile contact={selectedContact} />
+                <ContactProfile contact={selectedContact} onContactClick={handleBackClick} />
             ) : (
                 <ContactList contacts={contacts} onContactClick={handleContactClick} />
             )}
